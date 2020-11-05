@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>After de GIT</title>
+</head>
+
+<body>
+    <div class="separador">
+        <h1>GIT</h1>
+        <div class="texto">
+            <p>GIT es un software de control de versiones.</p> 
+            <p> La finalidad es poder registrar los cambios que se presenten en
+                el proyecto.</p>
+            <p>Fundamentalmente su uso se da cuando se trabaja en equipo, ya que varias personas van a estar trabajando
+                sobre los mismos archivos haciendo diferentes versiones.</p>
+            <p>Obviamente, también se puede utilizar para trabajar solo!</p>
+            <p>La opción para poder trabajar sobre tu proyecto de manera remota es, por ejemplo: 
+                <button><a href="github.html">GitHub.</a></button></p>
+        </div>
+        <img src="git_proceso.png" alt=""> 
+    </div>
+    <div class="separador">
+        <h3>¿Cómo saber si en mi PC tengo instalado GIT?</h3>
+        <div class="texto">
+            <ol>
+                <li>Abro la consola (preferentemente en la ubicación en dónde voy a trabajar)</li>
+                <li><b>git version</b></li>
+                <li>Si este comando no funciona, instalar GIT.</li>
+                <li>https://git-scm.com/</li>
+            </ol>
+        </div>
+    </div>
+    <div class="separador">
+        <h3>Configurar GIT por única vez en la PC</h3>
+        <div class="texto">
+            <ol>
+                <li>git config --global user.name "Johanna Palo"</li>
+                <li>git config --global user.email tuemail@mail.com</li>
+                <li>Para confirmar que usuario y mail escribiste, 
+                    poné el mismo comando pero sin los datos ;)</li>
+            </ol>
+        </div>
+    </div>
+    <div class="separador">
+        <h3>Empezar con GIT desde 0</h3>
+        <div class="texto">
+            <ol>
+                <li>Ya parado en la carpeta padre del working directory</li>
+                <li><b>git init</b></li>
+                <li>Esto inicia el repositorio. Se hace una sola vez por working directory</li>
+                <li>En VS, las carpetas recien agregadas se ponen en verde con una U</li>
+                <li>U: untracked / sin seguimiento</li>
+            </ol>
+        </div>
+    </div>
+    <div class="separador">
+        <h3>Trabajar con GIT</h3>
+        <div class="texto">
+            <ol>
+                <li><b>git status -s:</b> Indica el estado de cada archivo. Si se crearon, si se eliminaron o si se modificaron.</li>
+                <li>Una vez que sabemos que archivos queremos agregar, hacemos git add </li>
+                <li><b>git add:</b> Agrega archivos al stagin area. Podemos hacerlo agregando archivo por archivo "git add index.html" o agregando todo junto <b>"git add ."</b></li>
+                <!-- hacemos un git status -s para ver como van los arhcivos -->
+                <li>Una vez que esta en el área temporal, se puede hacer un commit.</li>
+                <li><b>git commit -m:</b> "Se agrega mensaje"</li>
+                <!-- hacemos un git status -s para ver como van los arhcivos -->
+                <li><b>git --oneline:</b> Este comando nos da el ID de cada commit que hicimos y este ID nos permite viajar entre las diferentes versiones.</li> 
+
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="separador">
+    <h3>Ramas / Branches</h3>
+    <div class="texto">
+        <ol>
+            <!-- volvemos a poner git --oneline para ver los commits y la rama master -->
+            <li><b>git branch nuevaRama:</b>Crea la rama con el nombre que querramos. Aconsejo usar camelCase</li>
+            <li><b>git checkout nuevaRama:</b>Me muevo a la nueva rama</li>
+            <li><b>git branch: me muestra las ramas que hay</b></li>
+            <!-- git add . , agrego cambios. git log --oneline veo en que rama estoy -->
+            <li>git branch -l: veo los nombres de todas las ramas</li>
+            <li>git branch -d: elimina una rama</li>
+            <li>git branch -m: renombra la rama en la que estoy.</li>
+        </ol>
+    </div>
+    <img src="git_ramas.png" alt="">
+</div>
+<div class="separador">
+    <h3>Merge / Mezclar</h3>
+    <div class="texto">
+        <ol>
+            <li><b>git merge:</b> mezcla las ramas. Hay que pararse siempre sobre la rama master o main para mergear!</li>
+            <li><b>git log --oneline --graph:</b> me muestra un 'grafico' con las bifurcaciones</li>
+        </ol>
+    </div>
+    <img src="git_ramas.png" alt="">
+</div>
+</body>
+
+</html>
