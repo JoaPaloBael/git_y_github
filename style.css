@@ -37,26 +37,3 @@ img{
     margin: 50px auto;
 }
 
-ol{
-    margin: 15px 15px;
-    font-size: 18px;
-    padding: 6px;
-}
-
-li{
-    padding: 0 10px;
-    margin-bottom: 0.5rem;
-    list-style-type: decimal;
-}
-
-p{
-    text-align: center;
-    margin: 0 6rem;
-    padding: 10px 0 5px 0;
-    font-size: 21px;
-}
-ol li ul.sublista li{
-    list-style-type: disc;
-    margin-left: 35px;
-    padding: 0;
-}
