@@ -12,21 +12,22 @@ div.separador{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 990px;
+    margin: 0 auto;
 }
 
 h1, h3{
     text-align: center;
     padding: 10px;
-    background-color:#24292e;
-    color: #FFFFFF;
+    background-color: black;
+    color: chocolate;
     display: flex;
     justify-content: center;
 }
 
 div.texto{
-    border: solid 5px #F14E32;
+    border: solid 5px #ee710a;
     border-bottom: solid 5px 15px;
-    border-radius: 0 0 15px 15px;
     height: 100%;
     margin-bottom: 20px;
     padding: 0 2rem;
@@ -45,7 +46,7 @@ ol{
 li{
     padding: 0 10px;
     margin-bottom: 0.5rem;
-    list-style-type: upper-roman;
+    list-style-type: decimal;
 }
 
 p{
@@ -54,19 +55,8 @@ p{
     padding: 10px 0 5px 0;
     font-size: 21px;
 }
-
-button{
-    font-size: 30px;
-    color: inherit;
-    border: none;
-}
-
-a{
-    color: #24292e;
-
-}
-
-a:hover{
-    background-color:#24292e;
-    color: #FFFFFF;
+ol li ul.sublista li{
+    list-style-type: disc;
+    margin-left: 35px;
+    padding: 0;
 }
