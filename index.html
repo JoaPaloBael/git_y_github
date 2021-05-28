@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>After de GIT</title>
 </head>
-
 <body>
     <div class="separador">
         <h1>GIT</h1>
@@ -18,8 +17,9 @@
             <p>Fundamentalmente su uso se da cuando se trabaja en equipo, ya que varias personas van a estar trabajando
                 sobre los mismos archivos haciendo diferentes versiones.</p>
             <p>Obviamente, también se puede utilizar para trabajar solo!</p>
-            <p>La opción para poder trabajar sobre tu proyecto de manera remota es, por ejemplo:
-                <button><a href="github.html">GitHub.</a></button></p>
+            <p>La opción para poder trabajar sobre tu proyecto de manera remota es, por ejemplo, GitHub, que lo vamos a
+                ver
+                la clase que viene.</p>
         </div>
         <img src="git_proceso.png" alt="">
     </div>
@@ -42,6 +42,7 @@
                 <li>git config --global user.email tuemail@mail.com</li>
                 <li>Para confirmar que usuario y mail escribiste,
                     poné el mismo comando pero sin los datos ;)</li>
+                <li>Ya podés cerrar la consola!</li>
             </ol>
         </div>
     </div>
@@ -49,57 +50,97 @@
         <h3>Empezar con GIT desde 0</h3>
         <div class="texto">
             <ol>
-                <li>Ya parado en la carpeta padre del working directory</li>
+                <li>Parate en la carpeta donde tenés los archivos de tu proyecto (Esta carpeta se llama REPOSITORIO o WORKING DIRECTORY)</li>
+                <li>Borra la ruta donde te dice que estas y escribi CMD y se te va abrir la consola ya en la ruta correcta</li>
+                <li>Ahora que ya estás parado en el Repositorio (o working directory) escribí en la consola:</li>
                 <li><b>git init</b></li>
                 <li>Esto inicia el repositorio. Se hace una sola vez por working directory</li>
-                <li>En VS, las carpetas recien agregadas se ponen en verde con una U</li>
+                <li>En VSC, las carpetas recien agregadas se ponen en verde con una U</li>
                 <li>U: untracked / sin seguimiento</li>
+                <li>Listo! Ya estás trabajando con GIT.</li>
             </ol>
         </div>
     </div>
     <div class="separador">
-        <h3>Trabajar con GIT</h3>
+        <h3>Seguir trabajando con GIT</h3>
         <div class="texto">
             <ol>
-                <li><b>git status -s:</b> Indica el estado de cada archivo. Si se crearon, si se eliminaron o si se modificaron.</li>
+                <li><b>git status -s:</b> Indica el estado de cada archivo. Si se crearon, si se eliminaron o si se
+                    modificaron.</li>
                 <li>Una vez que sabemos que archivos queremos agregar, hacemos git add </li>
-                <li><b>git add:</b> Agrega archivos al stagin area. Podemos hacerlo agregando archivo por archivo "git add index.html" o agregando todo junto <b>"git add ."</b></li>
+                <li><b>git add:</b> Agrega archivos al stagin area. Podemos hacerlo agregando archivo por archivo "git
+                    add index.html" o agregando todo junto <b>"git add ." (Fijate que hay un espacio entre add y el .</b></li>
                 <!-- hacemos un git status -s para ver como van los arhcivos -->
                 <li>Una vez que esta en el área temporal, se puede hacer un commit.</li>
                 <li><b>git commit -m:</b> "Se agrega mensaje"</li>
                 <!-- hacemos un git status -s para ver como van los arhcivos -->
-                <li><b>git --oneline:</b> Este comando nos da el ID de cada commit que hicimos y este ID nos permite viajar entre las diferentes versiones.</li>
+                <li><b>git log:</b> Con esto vamos a ver el listado de commits con mas detalles, "más prolijo"</li>
+                <li><b>git log --oneline:</b> Este comando nos da una vista rápida con casi la misma información que el comando anterior.</li>
 
             </ol>
         </div>
     </div>
-</div>
-<div class="separador">
-    <h3>Ramas / Branches</h3>
-    <div class="texto">
-        <ol>
-            <!-- volvemos a poner git --oneline para ver los commits y la rama master -->
-            <li><b>git branch nuevaRama:</b>Crea la rama con el nombre que querramos. Aconsejo usar camelCase</li>
-            <li><b>git checkout nuevaRama:</b>Me muevo a la nueva rama</li>
-            <li><b>git branch: me muestra las ramas que hay</b></li>
-            <!-- git add . , agrego cambios. git log --oneline veo en que rama estoy -->
-            <li>git branch -l: veo los nombres de todas las ramas</li>
-            <li>git branch -d: elimina una rama</li>
-            <li>git branch -m: renombra la rama en la que estoy.</li>
-        </ol>
-    </div>
-    <img src="git_ramas.png" alt="">
-</div>
-<div class="separador">
-    <h3>Merge / Mezclar</h3>
-    <div class="texto">
-        <ol>
-            <li><b>git merge:</b> mezcla las ramas. Hay que pararse siempre sobre la rama master o main para mergear!</li>
-            <li><b>git log --oneline --graph:</b> me muestra un 'grafico' con las bifurcaciones</li>
-        </ol>
-    </div>
-    <img src="git_ramas.png" alt="agregue un alt para ver que onda">
-</div>
-</body>
+    <div class="separador">
+        <h3>Ramas / Branches</h3>
+        <div class="texto">
+            <ol>
+                <!-- volvemos a poner git --oneline para ver los commits y la rama master -->
+                <li><b>git branch nuevaRama:</b>Crea la rama con el nombre que querramos. Aconsejo usar camelCase</li>
+                <li><b>git checkout nuevaRama:</b>Me muevo a la nueva rama</li>
+                <li><b>git branch: me muestra las ramas que hay</b></li>
+                <!-- git add . , agrego cambios. git log --oneline veo en que rama estoy -->
+                <li><b>git branch -l:</b> veo los nombres de todas las ramas</li>
+                <li><b>git branch -d: </b>elimina una rama</li>
+                <li><b>git branch -m: </b>renombra la rama en la que estoy.</li>
+                <li><b>git log --graph --oneline:</b> Este comando nos muestra en un gráfico las bifurcaciones de la rama</li>
 
+            </ol>
+        </div>
+        <img src="git_ramas.png" alt="">
+    </div>
+    <div class="separador">
+        <h3>Merge / Mezclar</h3>
+        <div class="texto">
+            <ol>
+                <li><b>git merge:</b> mezcla las ramas. Hay que pararse siempre sobre la rama master para mergear!</li>
+            </ol>
+        </div>
+        <img src="git_ramas.png" alt="">
+    </div>
+    <div class="separador">
+        <h3>Git Ignore</h3>
+        <div class="texto">
+            <p>No todos los archivos y carpetas son necesarios. A veces incluso hay carpetas como es el caso de <b>node_modules</b> que pesan un montón y no le sirven a nadie más que a vos o que tienen información "confidencial" o nada relevante para personas externas al proyecto como los archivos <b>package.json o package.json-lock</b>
+            </p>
+            <p>
+                En estos casos vamos a crear un archivo oculto que se va a llamar <b>.gitignore</b> y en ese archivo vamos a escribir los nombres de los archivos o carpetas que queremos obviar de guarlarlos en git
+            </p>
+            <ol>
+                <li>Crear archivo <b>.gitignore</b> (Recordá que es un archivo oculto, por eso va con un . delante. En Mac y Linux estos archivos no son visibles, en windows si tenés activada la opción de "ver archivos ocultos" vas a poder visualizarlo.)</li>
+
+                <li>Escribir dentro los archivos que querés ignorar
+                    <ul class="sublista">
+                        <li>
+                            <b>node_modules/ </b>: Si es una carpeta lo que vas a ignorar, escribí el nombre de la carpeta y terminalo con /
+                        </li>
+                        <li>
+                            <b>*.json</b> :Si es una extensión de archivo, se escribe primero el * y luego la extensión incluyendo el .
+                        </li>
+                        <li>
+                            <b>style.css</b> :Si es un archivo, se escribe el nombre del archivo con su extensión.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Si querés borrar algo que te habías olvidado o generaste el .gitignore después de haber agregado archivos a git:</b>
+                    <ol>
+                        <li>Hace los pasos 1 y 2 de la misma manera</li>
+                        <li>git rm -r --cached nombre_archivo_o_carpeta_olvidada</li>
+                        <li>git commit -m 'Eliminada carpeta node_modules del repo'</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
 </html>
